@@ -101,45 +101,55 @@ n9.addEventListener("click", ()=>{
 
 // ##### BOTONES OPERACIONES MATEMATICAS #####
 plusButton.addEventListener("click", ()=>{
+    if (!value == ""){
     valuesList.push(value);
     valuesList.push("+");
     screen.innerHTML = "";
     operations.innerHTML = valuesList.join(" ");
     value = "";
-})
+    }
+});
 
 minusButton.addEventListener("click", ()=>{
+    if (!value == ""){
     valuesList.push(value);
     valuesList.push("-");
     screen.innerHTML = "";
     operations.innerHTML = valuesList.join(" ");
     value = "";
-})
+    }
+});
 
 productButton.addEventListener("click", ()=>{
+    if (!value == ""){
     valuesList.push(value);
     valuesList.push("*");
     screen.innerHTML = "";
     operations.innerHTML = valuesList.join(" ");
     value = "";
-})
+    }
+});
 
 devidedButton.addEventListener("click", ()=>{
+    if (!value == ""){
     valuesList.push(value);
     valuesList.push("/");
     screen.innerHTML = "";
     operations.innerHTML = valuesList.join(" ");
     value = "";
-})
+    }
+});
 
 equalsButton.addEventListener("click", ()=>{
+    if (!value == ""){
     valuesList.push(value);
     let r = result(valuesList)
     screen.innerHTML = r;
     value = r;
     operations.innerHTML = valuesList.join(" ");
     valuesList = [];
-})
+    }
+});
 
 reset.addEventListener("click", ()=>{
     screen.innerHTML = "RESET";
